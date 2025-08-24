@@ -1,0 +1,26 @@
+# fly.toml app configuration file generated for n8n-boxo on 2025-08-23T21:48:56Z
+#
+# See https://fly.io/docs/reference/configuration/ for information about how to use this file.
+#
+
+app = 'n8n-boxo'
+primary_region = 'iad'
+
+[build]
+dockerfile = "Dockerfile"
+
+[env]
+ PORT = "5678"
+
+[http_service]
+  internal_port = 5678
+  force_https = true
+  auto_stop_machines = true
+  auto_start_machines = true
+  min_machines_running = 0
+  processes = ['app']
+
+[[vm]]
+  memory = '1gb'
+  cpu_kind = 'shared'
+  cpus = 1
