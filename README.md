@@ -32,3 +32,15 @@ EXPOSE 5678
 # Comando para iniciar n8n
 CMD ["n8n"]
 
+fly secrets set \
+N8N_BASIC_AUTH_ACTIVE=true \
+N8N_BASIC_AUTH_USER=admin \
+N8N_BASIC_AUTH_PASSWORD=supersecurepassword \
+DB_TYPE=postgresdb \
+DB_POSTGRESDB_HOST=your-supabase-host \
+DB_POSTGRESDB_PORT=5432 \
+DB_POSTGRESDB_DATABASE=your-database-name \
+DB_POSTGRESDB_USER=your-database-user \
+DB_POSTGRESDB_PASSWORD=your-database-password \
+SUPABASE_JWT_SECRET=your-supabase-jwt-secret
+
