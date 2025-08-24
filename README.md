@@ -18,3 +18,17 @@
   "SUPABASE_JWT_SECRET": "your-supabase-jwt-secret"
 }
 
+FROM n8nio/n8n:latest
+
+# Copiar el archivo config.json al contenedor
+COPY config.json /data/config.json
+
+# Configurar el directorio de datos y permisos
+VOLUME ["/root/.n8n"]
+
+# Exponer el puerto de la aplicación
+EXPOSE 5678
+
+# Comando para iniciar n8n
+CMD ["n8n"]
+
