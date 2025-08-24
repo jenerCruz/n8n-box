@@ -34,13 +34,13 @@ CMD ["n8n"]
 
 fly secrets set \
 N8N_BASIC_AUTH_ACTIVE=true \
-N8N_BASIC_AUTH_USER=admin \
-N8N_BASIC_AUTH_PASSWORD=supersecurepassword \
+N8N_BASIC_AUTH_USER=pmc363 \
+N8N_BASIC_AUTH_PASSWORD=181526qrE \
 DB_TYPE=postgresdb \
 DB_POSTGRESDB_HOST=your-supabase-host \
 DB_POSTGRESDB_PORT=5432 \
-DB_POSTGRESDB_DATABASE=your-database-name \
-DB_POSTGRESDB_USER=your-database-user \
-DB_POSTGRESDB_PASSWORD=your-database-password \
+DB_POSTGRESDB_DATABASE=postgres \
+DB_POSTGRESDB_USER=postgres\
+DB_POSTGRESDB_PASSWORD=789456qrE$&1 \
 SUPABASE_JWT_SECRET=your-supabase-jwt-secret
 
